@@ -9,13 +9,13 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-          <Routes>
+        <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
             </Route>
-          </Routes>
-        </BrowserRouter>
+        </Routes>
+    </BrowserRouter>
   );
 }
 
