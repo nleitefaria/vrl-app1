@@ -4,11 +4,11 @@ const Artworks = () => {
 
     const [posts, setPosts] = useState([]);
     useEffect(() => {
-        fetch('https://api.artic.edu/api/v1/artworks?limit=2')
+        fetch('https://api.artic.edu/api/v1/artworks?limit=10')
              .then((response) => response.json())
              .then((data) => {
                 console.log(data);
-                setPosts(data);
+                setPosts(data.data);
              })
              .catch((err) => {
                 console.log(err.message);
@@ -19,7 +19,24 @@ const Artworks = () => {
   return(
     <div className="container-fluid">
         <h1>Artworks</h1>
+
+        <div>
+              {posts.map((post) => {
+                 return (
+
+                       <h2>{post.id}</h2>
+
+                 );
+              })}
+           </div>
+
+
+
+
+
+
     </div>
+
   );
 };
 
