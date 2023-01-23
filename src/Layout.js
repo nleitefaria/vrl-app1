@@ -19,6 +19,9 @@ const Layout = () => {
             <li class="nav-item">
                 <span class="nav-link" ><Link to="/products">Products</Link></span>
             </li>
+            <li class="nav-item">
+                <span class="nav-link" ><Link to="/tours">Tours</Link></span>
+            </li>
           </ul>
         </div>
       </nav>
